@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.fernandochristyanto.jsonplaceholderclient.R;
 import com.fernandochristyanto.jsonplaceholderclient.model.Post;
+import com.fernandochristyanto.jsonplaceholderclient.providers.RetrofitProvider;
 import com.fernandochristyanto.jsonplaceholderclient.proxy.PostClientImpl;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     @BindView (R.id.recyclerView)
     RecyclerView recyclerView;
     
-    private MainContract.Presenter presenter = new MainPresenter(this, new PostClientImpl());
+    private MainContract.Presenter presenter = new MainPresenter(this, new PostClientImpl(RetrofitProvider.getRetrofit()));
     private PostsAdapter postsAdapter;
     
     @Override
