@@ -7,6 +7,7 @@
   - [Dependencies](#dependencies)
   - [Architecture & app packages](#architecture--app-packages)
 - [Retrofit](#retrofit)
+- [Closing](#closing)
 
 # Android multithreading & http request demo
 ## Demo application - JsonplaceholderClient
@@ -166,3 +167,9 @@ postClient.getPosts().execute()
 ```
 
 > Pada android, sangat disarankan untuk melakukan IO bound operations seperti HTTP call secara asynchronous agar tidak blocking pada main thread, yang nantinya dapat berpotensi menyebabkan ANR (Application Not Responding)
+
+# Closing
+
+Berikut adalah demo aplikasi yang menggunakan Retrofit untuk fetch data jsonplaceholder.  
+Any questions? you can reach me at:
+- `line`: fernandochristyanto
